@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LatihanDownloadTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hEA-YS-pxT">
+                                <rect key="frame" x="32" y="410" width="329" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1uD-bi-tdl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="4" id="4iL-7P-wFc"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-4D-7dk">
+                                <rect key="frame" x="146.66666666666666" y="478" width="100" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Download"/>
+                                <connections>
+                                    <action selector="buttonDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Odl-wE-hvp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tZ-PQ-hLZ">
+                                <rect key="frame" x="166.66666666666666" y="442" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hEA-YS-pxT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0sr-Pe-boe"/>
+                            <constraint firstItem="Ksa-4D-7dk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7Dc-j5-mZK"/>
+                            <constraint firstItem="5tZ-PQ-hLZ" firstAttribute="top" secondItem="hEA-YS-pxT" secondAttribute="bottom" id="9nI-I4-H2U"/>
+                            <constraint firstItem="hEA-YS-pxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="FVB-Y7-fI2"/>
+                            <constraint firstItem="hEA-YS-pxT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NGZ-9x-8lJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hEA-YS-pxT" secondAttribute="trailing" constant="32" id="NXm-kL-MbP"/>
+                            <constraint firstItem="5tZ-PQ-hLZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OvU-e0-Pcp"/>
+                            <constraint firstItem="Ksa-4D-7dk" firstAttribute="top" secondItem="5tZ-PQ-hLZ" secondAttribute="bottom" constant="15" id="ekM-sS-4w2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonView" destination="Ksa-4D-7dk" id="5i3-EL-Vw7"/>
+                        <outlet property="messageView" destination="5tZ-PQ-hLZ" id="a1C-AL-fWs"/>
+                        <outlet property="progressView" destination="hEA-YS-pxT" id="5s3-ab-dhf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
